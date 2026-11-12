@@ -35,6 +35,9 @@ func _process(delta: float) -> void:
 func transition_to(state_type: Script) -> void:
 	var target_state: State = states.get(state_type)
 
+	if target_state == current_state:
+		return
+
 	if target_state:
 		current_state.exit()
 		current_state = target_state

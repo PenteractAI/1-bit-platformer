@@ -1772,8 +1772,31 @@ texture = ExtResource("2_mofoo")
 
 [sub_resource type="TileSet" id="TileSet_mofoo"]
 physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_4lj41")
 sources/1 = SubResource("TileSetAtlasSource_mofoo")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qgxqk"]
+texture = ExtResource("2_mofoo")
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+6:8/0 = 0
+3:10/0 = 0
+5:17/0 = 0
+3:9/0 = 0
+2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0.8918619, 8, 0.6936703, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_7pa18"]
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 2
+sources/0 = SubResource("TileSetAtlasSource_qgxqk")
 
 [node name="Level01" type="Node2D" unique_id=1498392657]
 
@@ -1809,6 +1832,10 @@ tile_set = SubResource("TileSet_mofoo")
 
 [node name="Foreground" type="TileMapLayer" parent="Tiles" unique_id=192267869]
 z_index = 1
+
+[node name="Hazards" type="TileMapLayer" parent="Tiles" unique_id=473911015]
+tile_map_data = PackedByteArray("AAALAAkAAAACAAYAAAAMAAkAAAACAAYAAAANAAkAAAACAAYAAAA=")
+tile_set = SubResource("TileSet_7pa18")
 
 [node name="Player" parent="." unique_id=2095729936 instance=ExtResource("3_mofoo")]
 position = Vector2(123, 142)

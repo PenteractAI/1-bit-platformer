@@ -62,7 +62,7 @@ move_right={
 
 2d_physics/layer_1="walls"
 2d_physics/layer_2="player"
-2d_physics/layer_3="threats"
+2d_physics/layer_3="hazards"
 
 [physics]
 
