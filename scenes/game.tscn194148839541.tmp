@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b30y7m5kjhqop"]
+
+[ext_resource type="Script" uid="uid://c03hr3fmwjkxf" path="res://scripts/game.gd" id="1_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://bq836rx7uwady" path="res://scenes/level_01.tscn" id="2_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://dvc1vtbdsp6fg" path="res://scenes/player.tscn" id="3_lnu2h"]
+
+[node name="Game" type="Node" unique_id=34769027 node_paths=PackedStringArray("player", "level_container")]
+script = ExtResource("1_lnu2h")
+player = NodePath("Player")
+level_container = NodePath("LevelContainer")
+levels = Array[PackedScene]([ExtResource("2_lbhrr")])
+
+[node name="LevelContainer" type="Node2D" parent="." unique_id=1843062754]
+
+[node name="Player" parent="." unique_id=2095729936 instance=ExtResource("3_lnu2h")]

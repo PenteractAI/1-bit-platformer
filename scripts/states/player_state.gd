@@ -3,7 +3,6 @@ class_name PlayerState extends State
 @onready var state_machine: StateMachine = get_parent()
 
 var player: Player
-var direction: float
 
 
 func _ready() -> void:
@@ -19,8 +18,12 @@ func get_input_direction() -> float:
 	return Input.get_axis("move_left", "move_right")
 
 
-func apply_horizontal_movement(direction: float) -> void:
-	player.velocity.x = direction * player.speed
+func apply_horizontal_movement(direction: float, delta: float) -> void:
+	player.velocity.x = move_toward(
+		player.velocity.x,
+		direction * player.speed,
+		player.acceleration_per_sec * delta,
+	)
 
 
 func apply_gravity(delta: float, max_fall_speed: float = INF) -> void:

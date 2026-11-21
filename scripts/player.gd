@@ -9,6 +9,7 @@ class_name Player extends CharacterBody2D
 @export_group("Movement")
 @export var speed := 300.0
 @export var sprint_speed := 350.0
+@export var acceleration_per_sec := 1000.0
 
 @export_group("Jump")
 @export var jump_velocity := -400.0
