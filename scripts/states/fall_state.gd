@@ -15,7 +15,7 @@ func exit() -> void:
 func physics_update(delta: float) -> void:
 	var direction := get_input_direction()
 	apply_horizontal_movement(direction, delta)
-	apply_gravity(delta)
+	apply_gravity(delta, player.fall_gravity)
 	player.move_and_slide()
 
 	if player.is_on_floor():

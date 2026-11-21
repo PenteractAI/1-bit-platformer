@@ -26,5 +26,9 @@ func apply_horizontal_movement(direction: float, delta: float) -> void:
 	)
 
 
-func apply_gravity(delta: float, max_fall_speed: float = INF) -> void:
-	player.velocity.y = minf(player.velocity.y + player.gravity * delta, max_fall_speed)
+func apply_gravity(
+	delta: float,
+	gravity: float = player.gravity,
+	max_fall_speed: float = INF,
+) -> void:
+	player.velocity.y = minf(player.velocity.y + gravity * delta, max_fall_speed)
