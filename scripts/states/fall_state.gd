@@ -1,5 +1,7 @@
 class_name FallState extends PlayerState
 
+var speed: float
+
 
 # Called once when this state becomes active
 func enter() -> void:

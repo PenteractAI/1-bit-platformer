@@ -4,6 +4,7 @@ class_name IdleState extends PlayerState
 # Called once when this state becomes active
 func enter() -> void:
 	print("Idle state entered.")
+	player.is_sprinting = false
 
 
 # Called once when this state is replaced by another

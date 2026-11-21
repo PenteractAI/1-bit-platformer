@@ -14,6 +14,8 @@ func exit() -> void:
 # Called every physics frame while this state is active
 func physics_update(delta: float) -> void:
 	var direction := get_input_direction()
+	player.is_sprinting = Input.is_action_pressed("sprint")
+
 	apply_horizontal_movement(direction, delta)
 	apply_gravity(delta)
 	player.move_and_slide()

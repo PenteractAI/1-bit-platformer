@@ -19,9 +19,11 @@ func get_input_direction() -> float:
 
 
 func apply_horizontal_movement(direction: float, delta: float) -> void:
+	var speed := player.sprint_speed if player.is_sprinting else player.speed
+
 	player.velocity.x = move_toward(
 		player.velocity.x,
-		direction * player.speed,
+		direction * speed,
 		player.acceleration_per_sec * delta,
 	)
 
