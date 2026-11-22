@@ -83,6 +83,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=2095729936 node_paths=PackedStringArray("hurtbox", "state_machine")]
+collision_layer = 2
 script = ExtResource("1_g2els")
 hurtbox = NodePath("Hurtbox")
 state_machine = NodePath("StateMachine")

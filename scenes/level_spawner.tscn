@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://df8fthe3mj5wb" path="res://scripts/level_spawner.gd" id="1_vb7kr"]
 
 [node name="LevelSpawner" type="Node2D" unique_id=1751766566 node_paths=PackedStringArray("spawn_marker")]
+modulate = Color(0, 1, 0, 1)
 script = ExtResource("1_vb7kr")
 spawn_marker = NodePath("Marker2D")
 

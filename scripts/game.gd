@@ -26,13 +26,18 @@ func switch_level(level_idx: int) -> void:
 		"The scene at index %d must have the Level script on its root node." % level_idx,
 	)
 
+	level.level_exited.connect(reload_level)
 	level_container.add_child(level)
 	level.spawn_player(player)
 	current_level_idx = level_idx
 
 
 func next_level() -> void:
-	switch_level(current_level_idx + 1)
+	switch_level.call_deferred(current_level_idx + 1)
+
+
+func reload_level() -> void:
+	switch_level.call_deferred(current_level_idx)
 
 
 func _clear_level_container() -> void:
