@@ -26,5 +26,9 @@ func _on_hurtbox_body_entered(_body: Node2D) -> void:
 	die()
 
 
+func _on_hurtbox_area_entered(area: Area2D) -> void:
+	die()
+
+
 func die() -> void:
 	state_machine.transition_to(DeadState)
